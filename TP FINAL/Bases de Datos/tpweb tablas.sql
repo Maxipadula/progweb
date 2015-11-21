@@ -205,7 +205,7 @@ create table if not exists reparacion
      id_transporte int,
      id_orden int,
      costo int, 
-     fecha date, 
+     fecha date,
      km int,
 	constraint reparacion_pk primary key (codigo_reparacion, id_mecanico, id_orden),
     constraint id_usuario_mecanico_reparacion foreign key (id_mecanico) references mecanico (id_mecanico)

@@ -111,10 +111,6 @@ values	(10, 'pato','Patricio Lombardia','1234asd','1965-10-23', 1, '302584789', 
 		(60, 'leo','Leonel Rodriguez','123123nhu','1985-11-07', 1, '34563218','C',3);
         
 
-update acoplado
-											set paten = "aa111"
-											where id_Acoplado = 601;
-
 
 /*delete from usuario where id_usuario = 10;*/
         
@@ -200,16 +196,13 @@ values	(0, 'sin acoplado',0),
 		(501, 'acolpado5',0),
 		(601, 'acoplado6',0)
 ;
-
-select * 
-from acoplado;
-   /* 
+    
 SELECT T.id_transporte, T.patente, V.id_viaje, A.paten
 												  FROM transporte T inner join 
 													    viaje V on T.id_transporte = V.id_transporte inner join 
 														acoplado A on V.id_acoplado = A.id_acoplado;
     
-    */
+    
 /*select *
 from acoplado;*/    
 
@@ -222,8 +215,8 @@ values	(1122, 30,101, 2222, 'Buenos Aires', 10000, 'Florianopolis', 'Pedromania'
 		(5566, 30,0, 2222, 'Misiones', 4000, 'Montevideo','sisis', '2015-12-12 12:30:34', '2015-12-12 16:30:00','medias',600),
 		(6677, 50,601, 2222, 'Mendoza',  8500, 'Asuncion','nadanada', '2015-07-06 12:00:20', '2015-07-06 20:40:29','buzos',750);
 
-SELECT *
-FROM viaje ; 
+SELECT Km_recorridos km
+										   FROM viaje ; 
 
 
 /*
@@ -327,9 +320,9 @@ values	(123, 006, 5555,1, 15000, '2015-08-06',1400),
 		(131, 003, 6666,9, 2500,'2015-06-26',3652);
 
         
-/*select * 
+select * 
 from reparacion;
-*/
+
 insert into alar_transp (id_transporte, id_alarmas, contador)
 values	(1111, 990, 10),
         (1111, 991, 5),

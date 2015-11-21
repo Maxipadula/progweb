@@ -42,7 +42,7 @@
 					</label>
 				</div>
 				
-				</br>
+					
 				<div><label>COMBUSTIBLE CONSUMIDO
 					<input type="text" name="combustbile" size="5">
 					</label>

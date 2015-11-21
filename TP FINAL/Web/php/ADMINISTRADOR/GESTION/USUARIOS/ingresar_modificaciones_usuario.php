@@ -60,5 +60,4 @@
 	}
 	
 	echo("MODIFICACION EXITOSA");
-
 ?>

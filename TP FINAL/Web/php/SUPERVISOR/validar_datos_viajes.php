@@ -32,26 +32,21 @@
  									values (".$id_viaj.",".$id_usua.",".$acoplado.",".$id_trnsp.",'".$orig."','0','".$destin."','".$client."', '".$fecha_inic."','0000-00-00 00:00:00', '".$carg."')  
  										    ;")or die (mysql_error()); 
 											
-	  $consultar_transporte =  mysql_query ("SELECT patente pat
+	  $consultar_transporte =  mysql_query ("SELECT patente
 												  FROM transporte 
 												where id_transporte = ".$id_trnsp."
 												") or die (mysql_error()); 	 
 
-	 $patente=mysql_fetch_array($consultar_transporte);
+	 $patente=mysql_fetch_assoc($consultar_transporte);
 	 
-	 $var =$patente['pat'];
-
-	
-	 
-	 $insert_patente_acoplado = mysql_query("update acoplado
-											set paten = '".$var."'
+	 $insert_patente_acoplado = mysql_query("upadate acoplado
+											set paten = ".$patente."
 											where id_Acoplado = '".$acoplado."'
 												;")or die (mysql_error()); 
 	 
 	 
 	$file = 'jr-qrcode.png';
 	
-	echo $file;
 	$data ="";
  											 
 	echo "<p>ENTREGAR QR AL CHOFER ASIGNADO.</p>    
